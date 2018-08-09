@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title || "John Blake" %></title>
+    <%= stylesheet_link_tag "theme", :relative => true %>
+    <%= javascript_include_tag "jquery-3.3.1.js", :relative => true %>
+  </head>
+  <body>
+    <header class="main-nav">
+      <nav>
+        <ul>
+          <li> <a href="/">Home</a> </li>
+        </ul>
+
+        <ul>
+          <li> <a href="/">About</a> </li>
+          <li> <a href="/">Help</a> </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+
+      <main class="content">
+
+        <! the side bar is constructed automatically from data/lectures.yml -->
+        <aside class="content-news">
+          <%= partial "partials/sidebar" %>
+        </aside>
+
+        <! the main content goes here -->
+        <main class="content-articles">
+
+          <! button for Night switch -->
+          <div class="switch">
+            <input id="toggle-box-checkbox" type="checkbox" />
+            <label for="toggle-box-checkbox"></label>
+          </div>
+          <span>Night mode</span>
+
+          <! Contents from pages are injected into this space using the 'yield' command -->
+          <%= yield %>
+        </main>
+      </main>
+    </div>
+  </body>
+<%= javascript_include_tag "site", :relative => true %>
+</html>

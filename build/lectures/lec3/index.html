@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Here is the third lecture</title>
+    <link href="../../stylesheets/theme.css" rel="stylesheet" />
+    <script src="../../javascripts/jquery-3.3.1.js"></script>
+  </head>
+  <body>
+    <header class="main-nav">
+      <nav>
+        <ul>
+          <li> <a href="/">Home</a> </li>
+        </ul>
+
+        <ul>
+          <li> <a href="/">About</a> </li>
+          <li> <a href="/">Help</a> </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+
+      <main class="content">
+
+        <! the side bar is constructed automatically from data/lectures.yml -->
+        <aside class="content-news">
+          
+    <li>  <a href="/lectures/lec1">lec1</a> </li>
+    <li>  <a href="/lectures/lec2">lec2</a> </li>
+    <li>  <a href="/lectures/lec3">lec3</a> </li>
+
+<aside class="content-news">
+</aside>
+
+        </aside>
+
+        <! the main content goes here -->
+        <main class="content-articles">
+
+          <! button for Night switch -->
+          <div class="switch">
+            <input id="toggle-box-checkbox" type="checkbox" />
+            <label for="toggle-box-checkbox"></label>
+          </div>
+          <span>Night mode</span>
+
+          <! Contents from pages are injected into this space using the 'yield' command -->
+          
+<h1> Lecture 3 </h1>
+
+<a href="/">Home</a>
+
+<h2>Friends</h2>
+
+<ol>
+    <li>Tom</li>
+    <li>Dick</li>
+    <li>Harry</li>
+</ol>
+
+
+        </main>
+      </main>
+    </div>
+  </body>
+<script src="../../javascripts/site.js"></script>
+</html>

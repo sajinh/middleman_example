@@ -1,0 +1,25 @@
+---
+title: Here is the main page
+my_list:
+  - one
+  - two
+  - three
+---
+
+
+<h1>
+  I am doing great!
+</h1>
+<h1>Friends</h1>
+<ol>
+  <% data.people.friends.each do |f| %>
+  <li><%= f %></li>
+  <% end %>
+</ol>
+
+<h1>List</h1>
+<ol>
+  <% current_page.data.my_list.each do |f| %>
+  <li><%= f %></li>
+  <% end %>
+</ol>

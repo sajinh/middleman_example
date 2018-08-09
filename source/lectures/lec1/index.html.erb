@@ -1,0 +1,21 @@
+---
+title: Here is the first lecture
+---
+
+
+<h1> Lecture 1 </h1> 
+
+<%= link_to "Home", "/", :relative=>true %>
+
+<div class="resources">
+
+  <h2>Friends</h2>
+
+  <ol>
+    <% data.people.friends.each do |f| %>
+      <li><%= f %></li>
+    <% end %>
+  </ol>
+
+</div>
+

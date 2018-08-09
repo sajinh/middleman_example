@@ -1,0 +1,51 @@
+---
+title: Here is the second lecture
+---
+
+
+<h1> Lecture 2 </h1>
+
+<%= link_to "Home", "/", :relative => true %>
+
+<h2>Friends</h2>
+
+<ol>
+  <% data.people.friends.each do |f| %>
+    <li><%= f %></li>
+  <% end %>
+</ol>
+
+<form>
+  <div class="group">
+    <label for="fname">First name</label>
+    <input name="fname" type="text" />
+    <input type="submit" />
+  </div>
+</form>
+
+<table class="table zebra">
+  <thead>
+    <tr>
+      <th>First</th>
+      <th>Last</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jane</td>
+      <td>Doe</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>Smith</td>
+    </tr>
+    <tr>
+      <td>Craig</td>
+      <td>Thompson</td>
+    </tr>
+    <tr>
+      <td>Doug</td>
+      <td>Winston</td>
+    </tr>
+  </tbody>
+</table>

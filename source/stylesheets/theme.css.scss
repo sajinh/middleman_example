@@ -1,0 +1,34 @@
+@import "kickstart";
+@import "get_switch";
+.main-nav {@include navbar();}
+.resources {display: none;}
+.content {@include row();}
+.content-news     { @include column('third'); }
+.content-articles { @include column('twothirds'); }
+.wrapper { @include wrapper();}
+.content-news h1 { @include heading_sm;}
+.switch {@include switch(); }
+
+body{
+  padding: 20px;
+  color: #f00;
+  background-size: 100% 400%;
+  background-position: 100% 0%;
+  transition: all 1s;
+  &.night{
+    background-position: 100% 100%;
+    background: grey;
+    color: #fff;
+  }
+}
+.night a:link {background-color: yellow;}
+
+.table.zebra {
+  @include table-default($zebra: true);
+}
+form {
+  @include form-default('horizontal');
+}
+.group {
+  @include form_group-default('horizontal');
+}
